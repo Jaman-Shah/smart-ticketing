@@ -261,7 +261,7 @@
           
           <!-- seats starts  -->
 
-          <div class="p-6 bg-white mt-6 flex">
+          <div class="p-6 bg-white mt-6 flex rounded-3xl">
             <!-- left side  -->
             <div class="w-3/5 border-r-2 border-dashed border-gray-400 pr-3">
               <h1 class="font-raleway font-semibold text-2xl mb-5">Select Your Seat</h1>
@@ -417,11 +417,101 @@
 
             <!-- right side  -->
 
-            <div class="w-2/5 pl-4">
-             <div class="border-b-2 border-dashed border-gray-400 w-11/12"> <h1 class="font-raleway font-semibold text-2xl mb-5">Select Your Seat</h1></div>
+            <div class="w-2/5 pl-4 font-inter">
+             <div class="border-b-2 border-dashed mb-6 border-gray-400 w-11/12"> <h1 class="font-raleway font-semibold text-2xl mb-5">Select Your Seat</h1></div>
+              
+             <!-- number of seat bought status and coupon area starts  -->
+
+              <div class="bg-[#F7F8F8] p-8 rounded-3xl">
+                <div class="flex justify-between text-base font-medium border-b-2 border-dashed border-gray-400">
+                  <h1>Seat 
+
+                    <!-- number of seat will be updated here  -->
+                    <sup>
+                      <span  id="seat-bought-num" class="bg-[#1DD100] px-2 text-white rounded-3xl">0
+                      </span>
+                    </sup>
+                  </h1>
+                  <h1>Class</h1>
+                  <h1>Price</h1>
+                </div>
+
+                <!-- ticket number update  -->
+
+                <div id="update-ticket" class="flex justify-between my-4 border-b-2 border-dashed border-gray-300 pb-4">
+                  
+                  <h1>h</h1>
+                  <h1>h</h1>
+                  <h1>h</h1>
+
+                </div>
+
+                <div class="flex justify-between font-medium text-base">
+                  <h1>Total Price</h1>
+                  <div class="flex gap-2"><h1>BDT</h1>
+                    <h1>
+                      
+                      <!-- total price will be updated here  -->
+                      <span id="total-price">0</span>
+                    </h1>
+                  </div>
+                </div>
+
+                <!-- coupon  enter area  -->
+
+                <div class="flex justify-between bg-white my-4 rounded-lg">
+                  <div>
+                    <input type="text" placeholder="Have Any coupon?" class="h-full w-full rounded-lg px-3 text-lg">
+                  </div>
+                  <div class="p-2">
+                  
+                    <!-- this is apply coupon button  -->
+                    <button id="apply-coupon" class="btn bg-[#1DD100] text-white">Apply</button>
+                  </div>
+                  </label>
+                </div>
+
+                <div class="flex justify-between font-medium text-base">
+                  <h1>Grand Total</h1>
+                  <div class="flex gap-2"><h1>BDT</h1>
+                    <h1>
+                      
+                      <!-- grand total price will be updated here  -->
+                      <span id="grand-total-price">0</span>
+                    </h1>
+                  </div>
+                </div>
 
 
 
+                
+              </div>
+
+             <!-- number of seat bought status and coupon area ends  -->
+
+              <!-- passenger info area starts  -->
+
+              <div>
+                <div class="my-4">
+                  <h1 class="font-semibold text-base mb-4 relative">Passenger Name<span class="text-xl absolute -top-2">*</span></h1>
+                  <input type="text" placeholder="Enter Your Name" class="w-full border-2 border-gray-500 p-4 rounded-xl">
+                </div>
+                <div class="my-4">
+                  <h1 class="font-semibold text-base mb-4 relative">Phone Number<span class="text-xl absolute -top-2">*</span></h1>
+                  <input type="text" placeholder="Enter Your Name" class="w-full border-2 border-gray-500 p-4 rounded-xl">
+                </div>
+                <div class="my-4">
+                  <h1 class="font-semibold text-base mb-4 relative">Email ID</h1>
+                  <input type="text" placeholder="Enter Your Name" class="w-full border-2 border-gray-500 p-4 rounded-xl">
+                </div>
+                <button class="btn w-full bg-[#1DD100] text-white mb-6">Next</button>
+                <div class="underline flex justify-between">
+                  <a href="#">Terms and Conditions</a>
+                  <a href="#">Cancellation policy</a>
+                </div>
+              </div>
+
+              <!-- passenger info area ends  -->
             </div>
           </div>
 
@@ -432,7 +522,7 @@
       <!-- ticket buy - sell section ends -->
 
     </main>
-    <footer class="bg-[#030712] text-white mt-11">
+    <footer class="bg-[#030712] text-white">
 
       <div class="container px-4 md:px-0 mx-auto py-32">
         <div class="font-raleway border-b-2 border-dashed flex gap-6 items-center flex-col md:flex-row justify-between pb-12">
