@@ -1,4 +1,4 @@
-//getting the values with the help of id
+//getting the necessary  values with the help of id
 
 const totalSeatCounter = document.getElementById("total-seat-counter");
 let totalSeatCounterValue = parseFloat(totalSeatCounter.innerText);
@@ -30,6 +30,7 @@ seatButtonsContainer.addEventListener("click", function (e) {
       totalSeatBought.innerText = totalSeatBoughtValue;
 
       totalSeatPriceValue += 550;
+      grandPriceValue += 550;
       totalSeatPrice.innerText = totalSeatPriceValue;
       grandPrice.innerText = totalSeatPriceValue;
 
@@ -55,3 +56,36 @@ seatButtonsContainer.addEventListener("click", function (e) {
     }
   }
 });
+
+// coupon button functionalities starts
+
+const couponApplyBtn = document.getElementById("coupon-apply-button");
+
+couponApplyBtn.addEventListener("click", function () {
+  const couponInsertFieldValue = document.getElementById(
+    "coupon-insert-field"
+  ).value;
+
+  if (totalSeatBoughtValue !== 4) {
+    alert("Please buy 4 tickets to apply coupon");
+  } else {
+    if (
+      couponInsertFieldValue !== "NEW15" &&
+      couponInsertFieldValue !== "Couple 20"
+    ) {
+      alert("please provide correct coupon code");
+    } else {
+      if (couponInsertFieldValue === "NEW15") {
+        grandPriceValue -= grandPriceValue * (15 / 100);
+        console.log(grandPriceValue);
+        grandPrice.innerText = grandPriceValue;
+      }
+      if (couponInsertFieldValue === "Couple 20") {
+        grandPriceValue -= grandPriceValue * (20 / 100);
+        grandPrice.innerText = grandPriceValue;
+      }
+      couponApplyBtn.disabled = true;
+    }
+  }
+});
+// coupon button functionalities ends
