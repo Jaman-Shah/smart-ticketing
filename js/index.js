@@ -76,6 +76,7 @@ seatButtonsContainer.addEventListener("click", function (e) {
  */
 
 const couponApplyBtn = document.getElementById("coupon-apply-button");
+const couponApplyBtnArea = document.getElementById("coupon-apply-button-area");
 const discountGainedArea = document.getElementById("discount-gained-area");
 let discountValue = 0;
 
@@ -120,7 +121,7 @@ couponApplyBtn.addEventListener("click", function () {
         grandPrice.innerText = grandPriceValue;
         appendDiscountHtml(discountValue);
       }
-      couponApplyBtn.disabled = true;
+      couponApplyBtnArea.classList.add("hidden");
     }
   }
 });
