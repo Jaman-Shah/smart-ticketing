@@ -89,3 +89,34 @@ couponApplyBtn.addEventListener("click", function () {
   }
 });
 // coupon button functionalities ends
+
+// next button functionalities starts
+
+const numberField = document.getElementById("number-field");
+const finalSubmitBtn = document.getElementById("final-submit-btn");
+const header = document.getElementById("header");
+const main = document.getElementById("main");
+const footer = document.getElementById("footer");
+const successMessage = document.getElementById("success-message-model");
+
+function checkEnableButton() {
+  if (numberField.value && totalSeatBoughtValue > 0) {
+    finalSubmitBtn.disabled = false;
+  } else {
+    finalSubmitBtn.disabled = true;
+  }
+}
+
+checkEnableButton();
+
+numberField.addEventListener("input", checkEnableButton);
+totalSeatBought.addEventListener("change", checkEnableButton);
+
+finalSubmitBtn.addEventListener("click", function () {
+  header.classList.add("hidden");
+  main.classList.add("hidden");
+  footer.classList.add("hidden");
+  successMessage.classList.remove("hidden");
+});
+
+// next button functionalities ends

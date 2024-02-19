@@ -9,12 +9,11 @@
       rel="stylesheet"
       type="text/css"
     />
-    <link rel="stylesheet" href="./styles/style.css" />
-
     <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="./styles/style.css" />
   </head>
   <body>
-    <header class="container px-4 md:px-0 mx-auto">
+    <header id="header" class="container px-4 md:px-0 mx-auto">
       <!-- navbar starts  -->
       <nav class="font-raleway">
         <div class="navbar bg-base-100">
@@ -130,7 +129,8 @@
        <!-- banner section ends  -->
 
     </header>
-    <main>
+    
+    <main id="main">
       
       <!-- best offer section starts  -->
 
@@ -494,13 +494,15 @@
                 </div>
                 <div class="my-4">
                   <h1 class="font-semibold text-base mb-4 relative">Phone Number<span class="text-xl absolute -top-2">*</span></h1>
-                  <input type="text" placeholder="Enter Your Name" class="w-full border-2 border-gray-500 p-4 rounded-xl">
+                  <input id="number-field" type="number" placeholder="Enter Your Name" class="w-full border-2 border-gray-500 p-4 rounded-xl">
                 </div>
                 <div class="my-4">
                   <h1 class="font-semibold text-base mb-4 relative">Email ID</h1>
                   <input type="text" placeholder="Enter Your Name" class="w-full border-2 border-gray-500 p-4 rounded-xl">
                 </div>
-                <button class="btn w-full bg-[#1DD100] text-white mb-6">Next</button>
+                <div class="mb-5">
+                  <button id="final-submit-btn" disabled class="btn bg-[#1DD100] text-white w-full ">Next</button>
+                </div>
                 <div class="underline flex justify-between">
                   <a href="#">Terms and Conditions</a>
                   <a href="#">Cancellation policy</a>
@@ -517,8 +519,12 @@
       </section>
       <!-- ticket buy - sell section ends -->
 
+      
+
+    
+
     </main>
-    <footer class="bg-[#030712] text-white">
+    <footer id="footer" class="bg-[#030712] text-white">
 
       <div class="container px-4 md:px-0 mx-auto py-32">
         <div class="font-raleway border-b-2 border-dashed flex gap-6 items-center flex-col md:flex-row justify-between pb-12">
@@ -552,6 +558,36 @@
       </div>
 
     </footer>
+
+    <!-- modal after final submit starts  -->
+
+    <div id="success-message-model" class=" hidden font-raleway h-screen w-full mx-auto my-auto bg-gray-400 flex justify-center items-center">
+      <div class="h-2/3 w-2/3 bg-white text-black p-6 text-center rounded-3xl">
+        <div class="flex justify-center mb-4">
+          <img src="./images/success.png" alt="">
+        </div>
+        <div>
+          <div class="font-bold text-3xl text-green-500 mb-4">
+            <h1>SUCCESS</h1>
+          </div>
+          <div>
+            <p class="font-semibold mb-3">Thank You For Booking Our Bus seats. <br>
+            We are working hard to find the best service and deals for you
+            </p>
+            <p class="mb-3">
+              Shortly you will find a confirmation in your email.
+            </p>
+          </div>
+        </div>
+        <div> 
+          <button class="btn bg-green-600 text-white w-1/2 rounded-3xl">Continue</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- modal after final submit ends  -->
+
+    
 
     <script src="./js/index.js"></script>
   </body>
