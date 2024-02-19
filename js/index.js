@@ -48,7 +48,7 @@ seatButtonsContainer.addEventListener("click", function (e) {
       parentElement.insertAdjacentHTML("beforeend", htmlCode);
 
       // styling the selected buttons
-      targetedButton.style.backgroundColor = "green"; //setting the bg color
+      targetedButton.style.backgroundColor = "#1DD100"; //setting the bg color
       targetedButton.style.color = "white"; //setting the text color
       targetedButton.setAttribute("disabled", true); // disabling the seat selected
     } else {

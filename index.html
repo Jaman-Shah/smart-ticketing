@@ -74,11 +74,11 @@
           style="background-image: url(./images/banner.png)"
         >
           <!-- banner content starts  -->
-          <div class="pt-16 px-52 pb-32 line-clamp-5">
+          <div class="pt-16 px-0 md:px-48 pb-32 line-clamp-5">
             <div class="hero-overlay bg-opacity-60"></div>
             <div class="hero-content text-center text-neutral-content">
               <div class="max-w-md">
-                <h1 class="mb-5 text-5xl font-bold">
+                <h1 class="mb-5 text-3xl md:text-5xl font-bold">
                   End-to-End Travel With<br /><span class="text-[#1DD100]"
                     >P Paribahan</span
                   >
@@ -89,14 +89,14 @@
                   aut repudiandae et a id nisi.
                 </p>
                 <button class="btn bg-[#1DD100] border-0 font-bold text-xl">
-                  <a href="#selectSeats">Buy Tickets</a>
+                  <a href="#buySellArea">Buy Tickets</a>
                 </button>
                 <div></div>
               </div>
             </div>
           </div>
           <!-- banner content ends  -->
-          <div class="mt-16 grid  grid-cols-1 sm:grid-cols-3 gap-6 absolute -bottom-1/2 md:-bottom-10">
+          <div class="mt-16 grid  grid-cols-1 sm:grid-cols-3 gap-6 absolute -bottom-full md:-bottom-16">
             <!-- stats card 1 -->
             <div class="bg-white text-black flex p-8 gap-2 rounded-3xl border-b-4 border-[#1DD100] ">
               <div><img src="./images/people.png" alt="" /></div>
@@ -134,7 +134,7 @@
       
       <!-- best offer section starts  -->
 
-      <section class="container px-4 md:px-0 mx-auto mt-[450px] md:mt-32">
+      <section class="container px-4 md:px-0 mx-auto mt-[480px] md:mt-32">
 
         <h1 class="font-raleway text-4xl font-bold text-center mb-12">Best Offers for you</h1>
         <!-- cards starts  -->
@@ -190,7 +190,7 @@
       <!-- best offer section ends -->
 
       <!-- ticket buy - sell section starts  -->
-      <section  class="py-32 bg-[#F7F8F8] rounded-t-[40px] border-t-8 border-[#1DD100] mt-10">
+      <section id="buySellArea"  class="py-32 bg-[#F7F8F8] rounded-t-[40px] border-t-8 border-[#1DD100] mt-10">
         <div class="container mx-auto">
           <!-- container title  -->
 
@@ -199,11 +199,11 @@
             <p class="font-inter font-normal text-lg">Yes, you can run unit test and view the results directly within the app. The integrated testing features allow for streamlined.</p>
           </div>
           
-          <div class="bg-white mt-12 rounded-3xl flex">
+          <div class="bg-white mt-12 rounded-3xl flex flex-col md:flex-row">
             <!-- left side  -->
             <div class="p-8">
               <!-- heading  -->
-              <div class="flex justify-between">
+              <div class="flex justify-between pr-16 md:pr-0 items-center">
 
                 <div class="flex items-center gap-3">
                   <div>
@@ -214,7 +214,7 @@
                     <p class="font-normal text-lg">Coach-009-WEB ! AC_Business</p>
                   </div>
                 </div>
-                <div>
+                <div class="flex">
                   <button class="btn bg-[#1dd10026]">
                     <div><img src="./images/seat-green-filled.png" alt=""></div>
                     <div>
@@ -236,16 +236,16 @@
                   <p>Route</p>
                     <p class="font-semibold">Dhaka-Sylhet</p>
                  </div>
-                <div class="w-full flex justify-between gap-6 mt-6">
-                  <button class="btn ">Boarding Point-Laxmipur</button>
-                  <button class="btn ">Dropping Point-Bogura</button>
-                  <button class="btn ">Est. Time-11 Hour</button>
+                <div class="w-full flex flex-col md:flex-row justify-between gap-6 mt-6">
+                  <button class="btn">Boarding Point-Laxmipur</button>
+                  <button class="btn">Dropping Point-Bogura</button>
+                  <button class="btn">Est. Time-11 Hour</button>
                 </div>
               </div>
             </div>
             <!-- divider  -->
-            <div class="border-2 border-dashed border-gray-400 ">
-              <img src="./images//info-devider.png" alt="">
+            <div class="hidden md:flex">
+                <img class="border-2 border-dashed border-gray-400" src="./images//info-devider.png" alt="">
             </div>
             <!-- right side  -->
             <div class="p-5 flex flex-col justify-center items-center font-raleway">
@@ -261,9 +261,9 @@
           
           <!-- seats starts  -->
 
-          <div id="selectSeats" class="p-6 bg-white mt-6 flex rounded-3xl">
+          <div class="p-6 bg-white mt-6 flex flex-col md:flex-row rounded-3xl">
             <!-- left side  -->
-            <div class="w-3/5 border-r-2 border-dashed border-gray-400 pr-3">
+            <div class="w-full md:w-3/5 border:none md:border-r-2 border-dashed border-gray-400 pr-3">
               <h1 class="font-raleway font-semibold text-2xl mb-5">Select Your Seat</h1>
               <div class="font-inter py-4 border-y-2 border-dashed border-gray-400 flex justify-between items-center">
                 <div class="flex gap-2 " >
@@ -292,120 +292,120 @@
                 <div  class="flex justify-between gap-16 mb-6">
                   <div class="flex gap-4 items-center">
                     <h1>A</h1>
-                    <button class="btn px-10">A1</button>
-                    <button class="btn px-10">A2</button>
+                    <button class="btn px-4  md:px-10">A1</button>
+                    <button class="btn px-4  md:px-10">A2</button>
                   </div>
                   <div class="flex gap-4">
-                    <button class="btn px-10">A3</button>
-                    <button class="btn px-10">A4</button>
+                    <button class="btn px-4  md:px-10">A3</button>
+                    <button class="btn px-4  md:px-10">A4</button>
                   </div>
                 </div>
                 <!-- B seats  -->
                 <div class="flex justify-between gap-16 mb-6">
                   <div class="flex gap-4 items-center">
                     <h1>B</h1>
-                    <button class="btn px-10">B1</button>
-                    <button class="btn px-10">B2</button>
+                    <button class="btn px-4  md:px-10">B1</button>
+                    <button class="btn px-4  md:px-10">B2</button>
                   </div>
                   <div class="flex gap-4">
-                    <button class="btn px-10">B3</button>
-                    <button class="btn px-10">B4</button>
+                    <button class="btn px-4  md:px-10">B3</button>
+                    <button class="btn px-4  md:px-10">B4</button>
                   </div>
                 </div>
                 <!-- C seats  -->
                 <div class="flex justify-between gap-16 mb-6">
                   <div class="flex gap-4 items-center">
                     <h1>C</h1>
-                    <button class="btn px-10">C1</button>
-                    <button class="btn px-10">C2</button>
+                    <button class="btn px-4  md:px-10">C1</button>
+                    <button class="btn px-4  md:px-10">C2</button>
                   </div>
                   <div class="flex gap-4">
-                    <button class="btn px-10">C3</button>
-                    <button class="btn px-10">C4</button>
+                    <button class="btn px-4  md:px-10">C3</button>
+                    <button class="btn px-4  md:px-10">C4</button>
                   </div>
                 </div>
                 <!-- D seats  -->
                 <div class="flex justify-between gap-16 mb-6">
                   <div class="flex gap-4 items-center">
                     <h1>D</h1>
-                    <button class="btn px-10">D1</button>
-                    <button class="btn px-10">D2</button>
+                    <button class="btn px-4  md:px-10">D1</button>
+                    <button class="btn px-4  md:px-10">D2</button>
                   </div>
                   <div class="flex gap-4">
-                    <button class="btn px-10">D3</button>
-                    <button class="btn px-10">D4</button>
+                    <button class="btn px-4  md:px-10">D3</button>
+                    <button class="btn px-4  md:px-10">D4</button>
                   </div>
                 </div>
                 <!-- E seats  -->
                 <div class="flex justify-between gap-16 mb-6">
                   <div class="flex gap-4 items-center">
                     <h1>E</h1>
-                    <button class="btn px-10">E1</button>
-                    <button class="btn px-10">E2</button>
+                    <button class="btn px-4  md:px-10">E1</button>
+                    <button class="btn px-4  md:px-10">E2</button>
                   </div>
                   <div class="flex gap-4">
-                    <button class="btn px-10">E3</button>
-                    <button class="btn px-10">E4</button>
+                    <button class="btn px-4  md:px-10">E3</button>
+                    <button class="btn px-4  md:px-10">E4</button>
                   </div>
                 </div>
                 <!-- F seats  -->
                 <div class="flex justify-between gap-16 mb-6">
                   <div class="flex gap-4 items-center">
                     <h1>F</h1>
-                    <button class="btn px-10">F1</button>
-                    <button class="btn px-10">F2</button>
+                    <button class="btn px-4  md:px-10">F1</button>
+                    <button class="btn px-4  md:px-10">F2</button>
                   </div>
                   <div class="flex gap-4">
-                    <button class="btn px-10">F3</button>
-                    <button class="btn px-10">F4</button>
+                    <button class="btn px-4  md:px-10">F3</button>
+                    <button class="btn px-4  md:px-10">F4</button>
                   </div>
                 </div>
                 <!-- G seats  -->
                 <div class="flex justify-between gap-16 mb-6">
                   <div class="flex gap-4 items-center">
                     <h1>G</h1>
-                    <button class="btn px-10">G1</button>
-                    <button class="btn px-10">G2</button>
+                    <button class="btn px-4  md:px-10">G1</button>
+                    <button class="btn px-4  md:px-10">G2</button>
                   </div>
                   <div class="flex gap-4">
-                    <button class="btn px-10">G3</button>
-                    <button class="btn px-10">G4</button>
+                    <button class="btn px-4  md:px-10">G3</button>
+                    <button class="btn px-4  md:px-10">G4</button>
                   </div>
                 </div>
                 <!-- H seats  -->
                 <div class="flex justify-between gap-16 mb-6">
                   <div class="flex gap-4 items-center">
                     <h1>H</h1>
-                    <button class="btn px-10">H1</button>
-                    <button class="btn px-10">H2</button>
+                    <button class="btn px-4  md:px-10">H1</button>
+                    <button class="btn px-4  md:px-10">H2</button>
                   </div>
                   <div class="flex gap-4">
-                    <button class="btn px-10">H3</button>
-                    <button class="btn px-10">H4</button>
+                    <button class="btn px-4  md:px-10">H3</button>
+                    <button class="btn px-4  md:px-10">H4</button>
                   </div>
                 </div>
                 <!-- I seats  -->
                 <div class="flex justify-between gap-16 mb-6">
                   <div class="flex gap-4 items-center">
                     <h1>I</h1>
-                    <button class="btn px-[46px]">I1</button>
-                    <button class="btn px-[45px]">I2</button>
+                    <button class="btn px-5 md:px-11">I1</button>
+                    <button class="btn px-5 md:px-11">I2</button>
                   </div>
                   <div class="flex gap-4">
-                    <button class="btn px-[44px]">I3</button>
-                    <button class="btn px-[43px]">I4</button>
+                    <button class="btn px-5 md:px-11">I3</button>
+                    <button class="btn px-5 md:px-11">I4</button>
                   </div>
                 </div>
                 <!-- J seats  -->
                 <div class="flex justify-between gap-16 mb-6">
                   <div class="flex gap-4 items-center">
                     <h1>J</h1>
-                    <button class="btn px-10">J1</button>
-                    <button class="btn px-10">J2</button>
+                    <button class="btn px-4 md:px-10">J1</button>
+                    <button class="btn px-4 md:px-10">J2</button>
                   </div>
                   <div class="flex gap-4">
-                    <button class="btn px-10">J3</button>
-                    <button class="btn px-10">J4</button>
+                    <button class="btn px-4 md:px-10">J3</button>
+                    <button class="btn px-4 md:px-10">J4</button>
                   </div>
                 </div>
               </div>
@@ -417,7 +417,7 @@
 
             <!-- right side  -->
 
-            <div class="w-2/5 pl-4 font-inter">
+            <div class="w-ful md:w-2/5 pl-4 font-inter">
              <div class="border-b-2 border-dashed mb-6 border-gray-400 w-11/12"> <h1 class="font-raleway font-semibold text-2xl mb-5">Select Your Seat</h1></div>
               
              <!-- number of seat bought status and coupon area starts  -->
