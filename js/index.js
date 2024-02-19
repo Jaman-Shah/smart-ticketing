@@ -12,6 +12,12 @@ let totalSeatPriceValue = parseFloat(totalSeatPrice.innerText);
 const grandPrice = document.getElementById("grand-total-price");
 let grandPriceValue = parseFloat(grandPrice.innerText);
 
+/**
+ * ...................................................
+ * seat buttons functionalities starts -->>
+ * ...................................................
+ */
+
 //adding click event for every button seats with the help of seats button container
 
 const seatButtonsContainer = document.getElementById("seat-buttons-container");
@@ -57,7 +63,17 @@ seatButtonsContainer.addEventListener("click", function (e) {
   }
 });
 
-// coupon button functionalities starts
+/**
+ * ...................................................
+ * seat buttons functionalities ends -->>
+ * ...................................................
+ */
+
+/**
+ * ...................................................
+ * coupon buttons functionalities starts -->>
+ * ...................................................
+ */
 
 const couponApplyBtn = document.getElementById("coupon-apply-button");
 const discountGainedArea = document.getElementById("discount-gained-area");
@@ -74,6 +90,8 @@ function appendDiscountHtml(disValue) {
       `;
   return discountGainedArea.insertAdjacentHTML("beforeend", bonusHtmlCode);
 }
+
+// event listener for apply coupon button
 
 couponApplyBtn.addEventListener("click", function () {
   const couponInsertFieldValue = document.getElementById(
@@ -106,9 +124,19 @@ couponApplyBtn.addEventListener("click", function () {
     }
   }
 });
-// coupon button functionalities ends
+/**
+ * ...................................................
+ * coupon buttons functionalities ends -->>
+ * ...................................................
+ */
 
-// next button functionalities starts
+/**
+ * ...................................................
+ * next / final submit buttons functionalities starts -->>
+ * ...................................................
+ */
+
+// getting necessary elements by id
 
 const numberField = document.getElementById("number-field");
 const finalSubmitBtn = document.getElementById("final-submit-btn");
@@ -116,6 +144,8 @@ const header = document.getElementById("header");
 const main = document.getElementById("main");
 const footer = document.getElementById("footer");
 const successMessage = document.getElementById("success-message-model");
+
+// function for check if the button is enabled
 
 function checkEnableButton() {
   if (numberField.value && totalSeatBoughtValue > 0) {
@@ -127,6 +157,7 @@ function checkEnableButton() {
 
 checkEnableButton();
 
+// checking every times when button clicked and filling number input field
 numberField.addEventListener("input", checkEnableButton);
 totalSeatBought.addEventListener("change", checkEnableButton);
 
@@ -137,4 +168,8 @@ finalSubmitBtn.addEventListener("click", function () {
   successMessage.classList.remove("hidden");
 });
 
-// next button functionalities ends
+/**
+ * ...................................................
+ * next / final submit buttons functionalities ends -->>
+ * ...................................................
+ */
