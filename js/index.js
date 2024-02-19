@@ -60,6 +60,20 @@ seatButtonsContainer.addEventListener("click", function (e) {
 // coupon button functionalities starts
 
 const couponApplyBtn = document.getElementById("coupon-apply-button");
+const discountGainedArea = document.getElementById("discount-gained-area");
+let discountValue = 0;
+
+function appendDiscountHtml(disValue) {
+  const bonusHtmlCode = `
+      <h1 class="text-blue-800">Discount</h1>
+      <div class="flex gap-2"><h1>BDT</h1>
+        <h1>
+          <span id="" class="text-blue-800">${disValue}</span>
+        </h1>
+      </div>
+      `;
+  return discountGainedArea.insertAdjacentHTML("beforeend", bonusHtmlCode);
+}
 
 couponApplyBtn.addEventListener("click", function () {
   const couponInsertFieldValue = document.getElementById(
@@ -76,13 +90,17 @@ couponApplyBtn.addEventListener("click", function () {
       alert("please provide correct coupon code");
     } else {
       if (couponInsertFieldValue === "NEW15") {
-        grandPriceValue -= grandPriceValue * (15 / 100);
+        discountValue = grandPriceValue * (15 / 100);
+        grandPriceValue = grandPriceValue - discountValue;
         console.log(grandPriceValue);
         grandPrice.innerText = grandPriceValue;
+        appendDiscountHtml(discountValue);
       }
       if (couponInsertFieldValue === "Couple 20") {
-        grandPriceValue -= grandPriceValue * (20 / 100);
+        discountValue = grandPriceValue * (20 / 100);
+        grandPriceValue = grandPriceValue - discountValue;
         grandPrice.innerText = grandPriceValue;
+        appendDiscountHtml(discountValue);
       }
       couponApplyBtn.disabled = true;
     }
